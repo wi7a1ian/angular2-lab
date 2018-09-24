@@ -1,0 +1,12 @@
+<p>
+  This is the USA component
+
+  <!-- We use one-time string initialization to pass a string constant into a child component, but only once during start up. -->
+  <app-state name="Florida"></app-state>
+
+  <!-- We can also bind component properties with the square brackets. -->
+  <app-state [name]="favorite"></app-state>
+
+  <!--We will use the built in directive ngFor to loop over the values. This allows us to add elements to the dom on the fly based on data in an array.-->
+  <app-state *ngFor="let stateName of others" [name]="stateName"></app-state>
+</p>

@@ -1,0 +1,22 @@
+<div class="row" [ngClass]="chicken.eggs > 0 ? 'chuckenWithEggs' : 'chuckenWithNoEggs' ">
+  <div class="col-sm-3">
+    <label>Name:</label>{{chicken.name}}
+  </div>
+  <div class="col-sm-3">
+    <label>Breed:</label>{{chicken.breed}}
+  </div>
+  <div class="col-sm-2">
+    <span *ngIf="chicken.eggs > 0">
+      <label>Eggs:</label>{{chicken.eggs}}
+    </span>
+  </div>
+  <div class="col-sm-4">
+    <span class="pull-right">
+      <button class="btn btn-default btn-xs" (click)="addEgg()">Lay eggs</button>
+      <button class="btn btn-default btn-xs" (click)="collectEggs()">Collect eggs</button>
+      <button class="btn btn-default btn-xs" (click)="deleteChicken(chicken.name)">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Kill
+    </button>
+    </span>
+  </div>
+</div>

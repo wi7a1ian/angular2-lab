@@ -1,0 +1,20 @@
+<h2> User:{{user.name}}</h2>
+
+<div>
+  <div>Username:<strong>{{user.username}}</strong></div>
+  <div>Email:{{user.email}}</div>
+  <div>Id:{{user.id}}</div>
+  <div>Phone:{{user.phone}}</div>
+</div>
+
+<br />
+
+<div class="btn-group">
+  <a class="btn btn-default" role="button" [routerLink]="['todos']">Todos</a>
+  <a class="btn btn-default" role="button" [routerLink]="['albums']">Albums</a>
+  <a class="btn btn-default" role="button" [routerLink]="['posts']">Posts</a>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

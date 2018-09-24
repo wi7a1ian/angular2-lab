@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-12">
+    <ul class="list-unstyled">
+      <li *ngFor="let chicken of GetChickenListInOrder()">
+        <app-chicken [chicken]="chicken" (deleteEvent)="deleteChickenFromList($event)" (eggEvent)="eggEvent($event)"></app-chicken>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <label>Coop Stats: </label> Eggs:{{eggs}}, Collected:{{collectedEggs}}
+  </div>
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="btn-group  pull-right">
+      <label class="btn btn-info btn-xs">Sort by:</label>
+      <label class="btn btn-success btn-xs" [(ngModel)]="sortChickensOrder" btnRadio="name" uncheckable >Name</label>
+      <label class="btn btn-success btn-xs" [(ngModel)]="sortChickensOrder" btnRadio="breed" uncheckable>Breed</label>
+      <label class="btn btn-success btn-xs" [(ngModel)]="sortChickensOrder" btnRadio="eggs" uncheckable>Eggs</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+div.chuckenWithEggs {
+ background-color:#fafafa;
+ border-left: solid 1px lightskyblue;
+}
+
+div.chuckenWithNoEggs { 
+ background-color: none;
+ border-left: none;
+}

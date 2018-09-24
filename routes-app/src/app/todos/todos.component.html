@@ -1,0 +1,24 @@
+<h2> Todo list</h2>
+<div *ngIf="loading">loading...</div>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+    <th>Completed</th>
+    <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let todo of data">
+    <td>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" disabled *ngIf="!todo.completed">
+          <input type="checkbox" disabled *ngIf="todo.completed" checked>
+        </label>
+      </div>
+    </td>
+    <td>{{todo.title}}</td>
+  </tr>
+  </tbody>
+</table>
